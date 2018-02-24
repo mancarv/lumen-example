@@ -99,4 +99,36 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+/*
+|--------------------------------------------------------------------------
+| Add Lumen Generator
+|--------------------------------------------------------------------------
+/ To use some generators command (just like you do in Laravel)
+/ Available Command
+/ key:generate      Set the application key
+/
+/ make:command      Create a new Artisan command
+/ make:controller   Create a new controller class
+/ make:event        Create a new event class
+/ make:job          Create a new job class
+/ make:listener     Create a new event listener class
+/ make:mail         Create a new email class
+/ make:middleware   Create a new middleware class
+/ make:migration    Create a new migration file
+/ make:model        Create a new Eloquent model class
+/ make:policy       Create a new policy class
+/ make:provider     Create a new service provider class
+/ make:seeder       Create a new seeder class
+/ make:test         Create a new test class
+/
+/ Additional Useful Command
+/ clear-compiled    Remove the compiled class file
+/ serve             Serve the application on the PHP development server
+/ tinker            Interact with your application
+/ optimize          Optimize the framework for better performance
+/ route:list        Display all registered routes.
+*/
+
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
 return $app;
